@@ -122,7 +122,7 @@ Dự án "counter" được tạo theo mặc định trên dự án mới trên 
 void main() => runApp(GetMaterialApp(home: Home()));
 ```
 
-- Chú ý: điều này không sửa đổi MaterialApp của Flutter, GetMaterialApp không phải là MaterialApp được sửa đổi, nó chỉ là một Widget được tạo trước với MaterialApp mặc định là child. Bạn có thể cấu hình điều này theo cách thủ công, nhưng nó chắc chắn là không cần thiết. GetMaterialApp sẽ tạo các route, đưa chúng vào, đưa bản dịch, đưa mọi thứ bạn cần để điều hướng route. Nếu bạn chỉ sử dụng Get để quản lý trạng thái hoặc quản lý phụ thuộc, thì không cần thiết phải sử dụng GetMaterialApp. Tóm lại, GetMaterialApp chỉ cần thiết cho các route, snacksbar, internationalization, bottomSheets, Dialog và các APIs cấp cao liên quan đến route và không có "context".
+- Chú ý: điều này không sửa đổi MaterialApp của Flutter, GetMaterialApp không phải là MaterialApp được sửa đổi, nó chỉ là một Widget được tạo trước với MaterialApp mặc định là child. Bạn có thể cấu hình điều này theo cách thủ công, nhưng nó chắc chắn là không cần thiết. GetMaterialApp sẽ tạo các route, đưa chúng vào, đưa bản dịch, đưa mọi thứ bạn cần để điều hướng route. Nếu bạn chỉ sử dụng Get để quản lý state hoặc quản lý dependencies, thì không cần thiết phải sử dụng GetMaterialApp. Tóm lại, GetMaterialApp chỉ cần thiết cho các route, snacksbar, internationalization, bottomSheets, Dialog và các APIs cấp cao liên quan đến route và không có "context".
 - Chú ý²: Một lần nữa, bước này chỉ cần thiết nếu bạn sử dụng quản lý route (`Get.to ()`, `Get.back ()`, v.v.). Nếu bạn không sử dụng nó thì không cần thực hiện bước 1
 
 - Bước 2:
